@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette élégante inspirée des musées (Le MET) */
+  --bg: #FDFBF7;           /* Beige très clair, effet papier ancien */
+  --surface: #ffffff;      /* Blanc pur pour mettre en valeur les œuvres */
+  --primary: #2C2A29;      /* Gris anthracite, plus doux que le noir pur */
+  --accent: #7A2426;       /* Rouge bordeaux profond, typique du MET */
+  --accent-hover: #581618; /* Bordeaux assombri au survol */
+  --muted: #8C8279;        /* Textes secondaires (taupe) */
+  --border: #E6DFD7;       /* Bordures discrètes */
+  
+  /* Ombres plus luxueuses et diffuses */
+  --shadow: 0 4px 12px rgba(44, 42, 41, 0.04);
+  --shadow-hover: 0 12px 28px rgba(44, 42, 41, 0.08);
+  
+  /* Arrondis légèrement réduits (format tableau/cadre) */
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  /* Typographies : UI lisible + Serif pour tout l'aspect "Art" */
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--primary);
+  font-family: var(--font-ui);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Titres élégants qui utilisent la police serif */
+h1, h2, h3, h4, h5, h6, .serif-font {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
